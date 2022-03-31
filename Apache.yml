@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+
+  - name: Install Apache2 webserver on Ansible Nodes
+    apt:
+     name: apache2
+     state: present
+  
+  - name: Restart webserver on Nodes
+    service:
+     name: apache2
+     state: restarted
+
+  - name: Install Tree
+    apt:
+     name: tree
+     state: absent
