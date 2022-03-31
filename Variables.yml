@@ -1,0 +1,16 @@
+---
+- hosts: WebServer
+  become: yes
+  tasks:
+
+  - name: Install webserver on Debian node only
+    apt:
+     name: "{{Package_for_Ubuntu}}"
+     state: present
+    when: ansible_os_family == "Debian"
+
+  - name: Install webserver on RedHat node only
+    apt:
+     name: "{{Package_for_RedHat}}"
+     state: present
+    when: ansible_os_family == "RedHat"
