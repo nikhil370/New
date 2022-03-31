@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+
+  - name: Installing softwares with loop
+    apt:
+     name: "{{ item }}" 
+     state: present
+    
+    loop:
+    - git
+    - tree
+    - wget
