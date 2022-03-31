@@ -2,5 +2,5 @@
 - hosts: all
   become: yes
   tasks:
-  - name: Install Apache2
-    apt:
+  - name: Ping all ansible nodes
+    ping:
