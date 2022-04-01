@@ -5,24 +5,24 @@
 
   - name: Install webserver on Debian node only
     apt:
-     name: "{{Package_for_Ubuntu}}"
+     name: "{{webserver_ubuntu}}"
      state: present
     when: ansible_os_family == "Debian"
 
   - name: Start webserver on Debian node
     service:
-     name: "{{Package_for_Ubuntu}}"
+     name: "{{webserver_ubuntu}}"
      state: started
     when: ansible_os_family == "Debian"
 
   - name: Install webserver on RedHat node only
     yum:
-     name: "{{Package_for_RedHat}}"
+     name: "{{webserver_redhat}}"
      state: present
     when: ansible_os_family == "RedHat"
 
   - name: Start webserver on RedHat node
     service:
-     name: "{{Package_for_RedHat}}"
+     name: "{{webserver_redhat}}"
      state: started
     when: ansible_os_family == "RedHat"
