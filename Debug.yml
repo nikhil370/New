@@ -1,0 +1,12 @@
+---
+- hosts: 172.31.13.77
+  become: yes
+  tasks:
+
+  - name: I want to execute linux command directly
+    command: hostname
+    register: myvar
+
+  - name: I want to display value of command
+    debug:
+     msg: "{{myvar}}"
