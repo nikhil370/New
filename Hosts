@@ -5,12 +5,3 @@
 [DBServer]
 172.31.13.11
 172.31.0.22
-
-
-
-
-
-
-[WebServer:vars]
-Package_for_Ubuntu = apache2
-Package_for_RedHat = httpd
