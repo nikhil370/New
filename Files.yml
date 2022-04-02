@@ -1,5 +1,0 @@
-  
-  - name: Create a file on Ubuntu node
-    file:
-     path: /home/ubuntu/test.txt
-     state: touch
