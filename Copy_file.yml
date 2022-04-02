@@ -22,4 +22,4 @@
   - name: restartwebserver
     service:
      name: apache2
-     state: stopped
+     state: restarted

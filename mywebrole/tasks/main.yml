@@ -1,2 +1,4 @@
----
-# tasks file for mywebrole
+- name: Install Git
+  apt: 
+   name: git
+   state: present
