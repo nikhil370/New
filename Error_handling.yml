@@ -1,0 +1,19 @@
+---
+- hosts: 172.31.13.77
+  become: yes
+  tasks:
+
+  - name: Installing Git
+    apt:
+     name: git
+     state: present
+
+  - name: Installing Tree
+    apt:
+     name: tree
+     statee: present
+
+  - name: Installing Wget
+    apt:
+     name: wget
+     state: present 
