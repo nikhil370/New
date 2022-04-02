@@ -10,3 +10,15 @@
   - name: I want to display value of command
     debug:
      msg: "{{myvar}}"
+
+  - name: Installing git
+    apt:
+     name: git 
+     state: present
+    when: myvar.stderr == ""
+
+  - name: Installing tree
+    apt:
+     name: tree
+     state: present
+    when: myvar.stderr !== ""
