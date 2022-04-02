@@ -4,7 +4,7 @@
   tasks:
 
   - name: I want to execute linux command directly
-    command: hostname
+    command: hostname1
     register: myresult
 
   - name: I want to display value of command
