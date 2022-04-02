@@ -9,3 +9,8 @@
     apt:
      name: apache2
      state: present
+
+  - name: Copying myindex.j2 to node side
+    template:
+     src: myindex.j2
+     dest: /var/www/html/index.html
