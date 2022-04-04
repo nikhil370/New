@@ -1,2 +1,3 @@
 ---
 # tasks file for Tomcat8role
+- include_tasks: Install_java.yml

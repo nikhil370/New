@@ -1,0 +1,12 @@
+- hosts: 172.31.13.77
+  become: yes
+  tasks:
+
+  - name: Update permissions on tomcat folder
+    file:
+     path: /opt/tomcat/
+     owner: tomcat
+     group: tomcat
+     state: directory
+     recurse: yes
+     mode: '0777'

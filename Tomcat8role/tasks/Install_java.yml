@@ -1,0 +1,13 @@
+---
+- hosts: 172.31.13.77
+  become: yes
+  tasks:
+  
+  - name: Update system
+    apt:
+     update_cahce: yes
+
+  - name: Install java on Ubuntu node
+    apt:
+     name: default-jdk
+     state: present

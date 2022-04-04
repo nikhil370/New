@@ -1,0 +1,16 @@
+- hosts: 172.31.13.77
+  become: yes
+  tasks:
+
+  - name: Create group Tomcat
+    group:
+     name: tomcat
+     state: present
+
+  - name: Create user Tomcat
+    user:
+     name: tomcat
+     group: tomcat
+     shell: /bin/false
+     home: /opt/tomcat
+     state: present
