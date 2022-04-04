@@ -1,0 +1,27 @@
+
+- name: Create a systemd Service File
+  template:
+    src: systemd.j2
+    dest: /etc/systemd/system/tomcat.service
+    owner: tomcat
+    group: tomcat
+    mode: '0777'
+
+- name: Reaload Deamon
+  command: sudo systemctl daemon-reload
+
+- name: Starting tomcat
+  command: sudo systemctl start tomcat
+
+- name: Status tomcat
+  command: sudo systemctl status tomcat
+  register: tomcatstatus
+- name: Tomcat status
+  debug:
+   msg: "{{tomcatstatus}}"
+
+    
+    
+
+  
+    
