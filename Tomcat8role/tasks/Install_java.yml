@@ -1,9 +1,9 @@
 
   - name: Update system
     apt:
-     update_cahce: yes
+     update_cache: yes
 
-  - name: Install java on Ubuntu node
+  - name: Install java8 on Ubuntu node
     apt:
      name: default-jdk
      state: present
