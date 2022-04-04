@@ -1,6 +1,3 @@
----
-- hosts: 172.31.3.113
-  tasks:
 
   - name: Update permissions on tomcat folder
     file:
