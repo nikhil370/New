@@ -1,8 +1,9 @@
 
   - name: Download Tomcat war file
-    get_url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz
-    dest: /tmp
-    force_basic_auth: yes
+    get_url:
+     url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz
+     dest: /tmp/apache-tomcat-8.5.78.tar.gz
+     force_basic_auth: yes
 
 
   - name: Extract Tomcat war file
