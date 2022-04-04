@@ -5,32 +5,47 @@
      group: tomcat
      state: directory
      recurse: yes
-     mode: '0755'
+
+  - name: Update permissions on tomcat folder
+    file:
+     path: /opt/tomcat/conf
+     group: tomcat
+     state: directory
+     recurse: yes
+     mode: 'g+r'
+
+  - name: Update permissions on tomcat folder
+    file:
+     path: /opt/tomcat/conf
+     group: tomcat
+     state: directory
+     recurse: yes
+     mode: 'g+x'
 
   - name: Update permissions on tomcat webapps folder
     file:
-     path: /opt/tomcat/
+     path: /opt/tomcat/webapps
      owner: tomcat
      state: directory
      recurse: yes
 
   - name: Update permissions on tomcat work folder
     file:
-     path: /opt/tomcat/
+     path: /opt/tomcat/work
      owner: tomcat
      state: directory
      recurse: yes   
 
   - name: Update permissions on tomcat temp folder
     file:
-     path: /opt/tomcat/
+     path: /opt/tomcat/temp
      owner: tomcat
      state: directory
      recurse: yes  
 
   - name: Update permissions on tomcat logs folder
     file:
-     path: /opt/tomcat/
+     path: /opt/tomcat/logs
      owner: tomcat
      state: directory
      recurse: yes
