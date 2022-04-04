@@ -2,8 +2,35 @@
   - name: Update permissions on tomcat folder
     file:
      path: /opt/tomcat/
-     owner: tomcat
      group: tomcat
      state: directory
      recurse: yes
-     mode: '0777'
+     mode: '0755'
+
+  - name: Update permissions on tomcat webapps folder
+    file:
+     path: /opt/tomcat/
+     owner: tomcat
+     state: directory
+     recurse: yes
+
+  - name: Update permissions on tomcat work folder
+    file:
+     path: /opt/tomcat/
+     owner: tomcat
+     state: directory
+     recurse: yes   
+
+  - name: Update permissions on tomcat temp folder
+    file:
+     path: /opt/tomcat/
+     owner: tomcat
+     state: directory
+     recurse: yes  
+
+  - name: Update permissions on tomcat logs folder
+    file:
+     path: /opt/tomcat/
+     owner: tomcat
+     state: directory
+     recurse: yes
