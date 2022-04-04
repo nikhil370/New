@@ -1,5 +1,5 @@
+---
 - hosts: 172.31.3.113
-  become: yes
   tasks:
 
   - name: Download Tomcat war file
