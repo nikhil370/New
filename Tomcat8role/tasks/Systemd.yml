@@ -5,10 +5,16 @@
     dest: /etc/systemd/system/tomcat.service
 
 - name: Reaload Deamon
-  command: sudo systemctl daemon-reload
+  systemd:
+   state: started
+   deamon_reload: yes 
+   name: tomcat
+   enabled: yes
 
-- name: Starting tomcat
-  command: sudo systemctl start tomcat
+- name: Tomcat restart
+  systemd:
+   name: tomcat
+   state: restarted
 
 - name: Status tomcat
   command: sudo systemctl status tomcat
