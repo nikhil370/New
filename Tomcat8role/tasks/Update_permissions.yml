@@ -12,7 +12,7 @@
      group: tomcat
      state: directory
      recurse: yes
-     mode: 'g+r'
+     mode: g+r
 
   - name: Update permissions on tomcat folder
     file:
@@ -20,7 +20,7 @@
      group: tomcat
      state: directory
      recurse: yes
-     mode: 'g+x'
+     mode: g+x
 
   - name: Update permissions on tomcat webapps folder
     file:
