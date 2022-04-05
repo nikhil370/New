@@ -14,11 +14,3 @@
    name: tomcat
    state: started
    enabled: yes
-
-- name: Status tomcat
-  command: sudo systemctl status tomcat
-  register: tomcatstatus
-- name: Tomcat status
-  debug:
-   msg: "{{tomcatstatus}}"
-   
