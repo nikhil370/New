@@ -6,7 +6,7 @@
     ec2:
      key_name: DevOps
      instance_type: t2.micro
-     image: ami-0f2e255ec956ade7f
+     image: ami-0e48f1a17e563614e
      wait: yes
      group: MyIP
      count: 2
@@ -14,4 +14,4 @@
      vpc_subnet_id: subnet-04690a1f3092add50
      assign_public_ip: yes
      instance_tags:
-      name: Ansible_EC2
+      Name: Ansible_EC2
