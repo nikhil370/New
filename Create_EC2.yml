@@ -13,3 +13,5 @@
      region: ap-south-1
      vpc_subnet_id: subnet-04690a1f3092add50
      assign_public_ip: yes
+     instance_tags:
+      name: Ansible_EC2
