@@ -15,4 +15,5 @@
     unarchive:
      src: /tmp/apache-tomcat-8.5.78.tar.gz
      dest: /opt/tomcat
+     extra_opts: [--strip-components=1]
      remote_src: yes
