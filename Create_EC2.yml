@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: Creating AWS instance using ansible
-  - amazon.aws.ec2:
+    amazon.aws.ec2:
      key_name: DevOps
      instance_type: t2.micro
      image: ami-0f2e255ec956ade7f
@@ -13,4 +13,3 @@
      region: ap-south-1
      vpc_subnet_id: subnet-04690a1f3092add50
      assign_public_ip: yes
-     
