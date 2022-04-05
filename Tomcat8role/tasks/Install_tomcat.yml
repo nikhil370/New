@@ -5,13 +5,13 @@
      dest: /tmp/apache-tomcat-8.5.78.tar.gz
      force_basic_auth: yes
 
-  #- name: Create tomcat folder
-  #  file:
-  #   path: /opt/tomcat
-  #   state: directory
+  - name: Create tomcat folder
+    file:
+     path: /opt/tomcat
+     state: directory
 
   - name: Extract Tomcat war file
     unarchive:
      src: /tmp/apache-tomcat-8.5.78.tar.gz
-     dest: /opt/tomcat
+     dest: /opt/tomcat/
      remote_src: True
