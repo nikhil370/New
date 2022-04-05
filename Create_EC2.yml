@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: Creating AWS instance using ansible
-    amazon.aws.ec2:
+    ec2:
      key_name: DevOps
      instance_type: t2.micro
      image: ami-0f2e255ec956ade7f
