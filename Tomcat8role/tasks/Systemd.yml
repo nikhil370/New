@@ -5,9 +5,9 @@
     dest: /etc/systemd/system/tomcat.service
 
 - name: Reaload Deamon
-  systemd:
-   #deamon_reload: yes
+  systemd:   
    daemon_reexec: yes
+   deamon_reload: yes
    name: tomcat
    enabled: yes
 
