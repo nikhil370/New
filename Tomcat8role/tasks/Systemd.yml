@@ -7,7 +7,6 @@
 - name: Reaload Deamon
   systemd:   
    daemon_reexec: yes
-   deamon_reload: yes
    name: tomcat
    enabled: yes
 
