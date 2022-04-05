@@ -8,12 +8,12 @@
   systemd:   
    daemon_reexec: yes
    name: tomcat
-   enabled: yes
 
 - name: Tomcat restart
   systemd:
    name: tomcat
-   state: restarted
+   state: started
+   enabled: yes
 
 - name: Status tomcat
   command: sudo systemctl status tomcat
