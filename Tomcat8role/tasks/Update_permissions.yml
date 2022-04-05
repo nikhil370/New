@@ -3,7 +3,7 @@
     file:
      path: /opt/tomcat/
      group: tomcat
+     owner: tomcat
      state: directory
      recurse: yes
-     mode: 0777
-     
+     mode: '0777'

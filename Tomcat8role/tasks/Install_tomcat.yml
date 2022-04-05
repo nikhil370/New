@@ -9,7 +9,7 @@
     file:
      path: /opt/tomcat
      state: directory
-     mode: 0755
+     mode: '0755'
 
   - name: Extract Tomcat war file
     unarchive:
