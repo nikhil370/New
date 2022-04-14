@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.3.113
+- hosts: WebServer
   become: yes
   roles:
 
